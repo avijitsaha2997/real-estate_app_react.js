@@ -16,7 +16,9 @@ const DeveloperList = (props) => {
     return function () {
       axios
         .get(
-          `http://52.77.121.171:3008/api/v1/en/developers?page=${pageNumber}&size=8`
+          `${
+            import.meta.env.VITE_REACT_APP_API_URL
+          }/en/developers?page=${pageNumber}&size=8`
         )
         .then((response) => {
           setAllDev(allDev.concat(response.data.data.developers.data));
@@ -32,7 +34,9 @@ const DeveloperList = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://52.77.121.171:3008/api/v1/en/developers?page=1&size=8`)
+      .get(
+        `${import.meta.env.VITE_REACT_APP_API_URL}/en/developers?page=1&size=8`
+      )
       .then((response) => {
         setAllDev(response.data.data.developers.data);
       })

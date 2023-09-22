@@ -39,7 +39,7 @@ const SingleDeveloperView = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://52.77.121.171:3008/api/v1/en/data/filter-list")
+      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/en/data/filter-list`)
       .then((response) => {
         setFilterList(response.data.data);
       });

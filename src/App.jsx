@@ -44,6 +44,11 @@ function App() {
     ["property-list", lang],
     getAllProperties
   );
+  useEffect(() => {
+    window.process = {
+      ...window.process,
+    };
+  }, []);
 
   useEffect(() => {
     const isMobileView = window.matchMedia("(max-width: 767px)").matches;

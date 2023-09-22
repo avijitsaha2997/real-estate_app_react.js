@@ -10,6 +10,12 @@
     "watch-twind": "postcss ./src/tailwind.css -o ./src/index.css -w",
     "serve-json": "json-server --watch -p 4040 db.json"
   },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "overrides": {
+    "react-error-overlay": "6.0.9"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -52,6 +58,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
+    "react-error-overlay": "^6.0.9",
     "tailwind-scrollbar": "^3.0.4",
     "vite": "^4.2.0"
   }

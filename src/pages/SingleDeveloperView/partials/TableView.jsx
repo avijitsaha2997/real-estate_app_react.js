@@ -28,7 +28,9 @@ const TableView = (props) => {
       propertyTypeId: filterValues.propertyTypes,
     };
     axios
-      .get("http://52.77.121.171:3008/api/v1/en/properties", { params })
+      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/en/properties`, {
+        params,
+      })
       .then((response) => {
         setFilterData(response.data.data.properties.data);
       })
