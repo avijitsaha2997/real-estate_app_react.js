@@ -10,7 +10,7 @@ const DeveloperList = (props) => {
   const [filterData, setFilterData] = useState([]);
   const [allDev, setAllDev] = useState([]);
   const [hasMore, setHasMore] = useState(true);
-
+  //
   const fetchMore = () => {
     let pageNumber = 2;
     return function () {
