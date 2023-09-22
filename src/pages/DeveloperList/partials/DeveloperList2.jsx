@@ -33,9 +33,7 @@ const DeveloperList = (props) => {
     return function () {
       axios
         .get(
-          `${
-            import.meta.env.VITE_REACT_APP_API_URL
-          }/en/developers?page=${pageNumber}&size=8`
+          `http://52.77.121.171:3008/api/v1/en/developers?page=${pageNumber}&size=8`
         )
         .then((response) => {
           setAllDev(allDev.concat(response.data.data.developers.data));

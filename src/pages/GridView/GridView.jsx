@@ -34,7 +34,7 @@ const GridView = (props) => {
       };
 
       axios
-        .get(`${import.meta.env.VITE_REACT_APP_API_URL}/en/properties`, {
+        .get(`http://52.77.121.171:3008/api/v1/en/properties`, {
           params,
         })
         .then((response) => {
@@ -61,7 +61,7 @@ const GridView = (props) => {
       propertyTypeId: filterValues.propertyTypes,
     };
     axios
-      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/en/properties`, {
+      .get(`http://52.77.121.171:3008/api/v1/en/properties`, {
         params,
       })
       .then((response) => {
